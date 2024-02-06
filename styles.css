@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Hero-section {
+    background: url("/images/pic1.png");
+    background-size: cover;
+}
+
+
+.Hero-section > h1, h3 {
+    text-shadow: 0 0 1px black;
+}
+
+
+#main-image-1 {
+    background: url("images/co-opSociety.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
