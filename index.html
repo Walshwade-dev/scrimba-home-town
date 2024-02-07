@@ -10,32 +10,57 @@
     <link rel="stylesheet" href="/styles.css" />
 
 </head>
-<body >
-    <div class="Hero-section h-2/6 w-full text-[#FEFEFE] text-center flex flex-col gap-8 justify-center items-center py-14 ">
-        <h1 class="bg-[#023e8a] drop-shadow-lg w-[50%] px-4 py-2 mx-auto rounded-xl font-semibold">Visit Watuka Center</h1>
-        <h3 class="bg-[#0096c7] drop-shadow-lg  w-4/6 px-4 py-2 mx-auto rounded-xl">Enjoy beautiful views and fresh farm produce in this lively center next to Aberdare ranges.</h3>
+<body class="-z-40">
+    <!-- ====> HERO Section <===== -->
+    
+    <div class="Hero-section z-10 h-2/ md:min-h-[40vh] lg:min-h-[50vh] md:bg-transparent md:bg-no-repeat 
+                md:bg-origin-border md:bg-center  w-full text-[#FEFEFE] text-center flex flex-col 
+                gap-8 justify-center items-center py-14 ">
+        <h1 class="bg-[#023e8a] drop-shadow-lg w-[50%] md:max-w-[20%] px-4 py-2 mx-auto rounded-xl font-semibold">Visit Watuka Center</h1>
+        <h3 class="bg-[#0096c7] drop-shadow-lg  w-4/6 md:max-w-[30%] px-4 py-2 mx-auto rounded-xl">Enjoy beautiful views and fresh farm produce in this lively center next to Aberdare ranges.</h3>
     </div>
 
-    <div class="bg-[#bde0fe] h-2/6 w-full text-[#03045e] text-center justify-center items-center py-4 ">
-        <h2 class="font-bold  mb-2">Top three activities to do at Watuka</h2>
-        <div class="flex flex-col md:flex-row justify-between w-full mx-auto ">
-            <div class="circle ">
-                <div id="main-image-1" class="mx-auto w-[10rem] h-[10rem] border-8 border-[#ffafcc] overflow-hidden rounded-full drop-shadow-xl">
+    <!-- ====>ACTIVITIES Section start <====  -->
+    <div class="bg-[#bde0fe]  h-2/6 w-full text-[#03045e] text-center">
+        <h2 class="font-bold text-xl mb-2">Top three activities to do at Watuka</h2>
+        
+        <div class="w-full flex flex-col justify-around items-center md:flex-row md:px-14 md:py-10">
+            
+                <div class="bg-[red] w-[14rem] h-[24rem] py-[2rem] px-[1.5rem]">
+                    <div class="circle relative w-[12rem] h-[12rem] rounded-full mx-auto">
+                        <div id="main-image-1" class="absolute mx-auto w-[11rem] h-[11rem]  border-8 border-[#ffafcc] overflow-hidden rounded-full drop-shadow-xl ">
+                        </div>
+                        <div id="curved-text-1" class="text absolute curved-text ">
+                            <p>Enjoy m ilkshakes from the W atuka Co-op Society.</p>
+                        </div>
+                    </div>
+                </div>            
+
+                <div class="bg-[red] w-[14rem] h-[24rem] py-[2rem] px-[1.5rem]">
+                    <div class="circle relative w-[12rem] h-[12rem] rounded-full mx-auto">
+                        <div id="main-image-1" class="absolute mx-auto w-[11rem] h-[11rem]  border-8 border-[#ffafcc] overflow-hidden rounded-full drop-shadow-xl ">
+                        </div>
+                        <div id="curved-text-2"  class="text absolute curved-text">
+                            <p >Take scenic images of Nyeri county.</p>
+                        </div>
+                    </div>
                 </div>
-                <h4 class="curved-text">Enjoy milkshakes from the milk Coop Society</h4>
-            </div>
 
-            <div>
-                <img src="" />
-                <h4>Take scenic images of Nyeri county</h4>
-            </div>
+                <div class="bg-[red] w-[14rem] h-[24rem] py-[2rem] px-[1.5rem]">
+                    <div class="circle relative w-[12rem] h-[12rem] rounded-full mx-auto">
+                        <div id="main-image-1" class="absolute mx-auto w-[11rem] h-[11rem]  border-8 border-[#ffafcc] overflow-hidden rounded-full drop-shadow-xl ">
+                        </div>
+                        <div id="curved-text-3"  class="text absolute curved-text">
+                            <p>Go for a nature walk.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div>
-                <img src="" />
-                <h4>Go for nature walk</h4>
-            </div>
         </div>
+
     </div>
+    <!-- ====>ACTIVITIES Section end <====  -->
+
 </body>
 
 <script src="/index.js" ></script>
