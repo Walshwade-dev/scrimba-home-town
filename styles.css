@@ -25,6 +25,24 @@
 }
 
 
+#main-image-2 {
+    background: url("images/kabati.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(1) contrast(1);
+}
+
+
+#main-image-3  {
+    background: url("images/watuka-gate.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    filter: brightness(1.1) contrast(1.2);
+}
+
+
 .curved-text {
     animation: rotateText 20s linear infinite;
 }
