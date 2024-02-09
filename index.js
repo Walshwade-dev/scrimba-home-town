@@ -164,7 +164,7 @@ renderChapter(currentChapterIndex);
 renderPagination();
 
 
-// Get current year and update footer
+
 const currentYearElem = document.getElementById("currentYear");
 const currentYear = new Date().getFullYear();
 currentYearElem.textContent = currentYear;
