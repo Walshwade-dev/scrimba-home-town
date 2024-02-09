@@ -168,3 +168,13 @@ renderPagination();
 const currentYearElem = document.getElementById("currentYear");
 const currentYear = new Date().getFullYear();
 currentYearElem.textContent = currentYear;
+
+
+
+
+const guideCard = document.querySelector('.card__inner');
+
+
+guideCard.addEventListener('click',function(){
+    guideCard.classList.toggle('is-flipped');
+});
