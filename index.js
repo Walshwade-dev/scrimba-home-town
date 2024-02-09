@@ -84,7 +84,9 @@ const paginationContainer = document.getElementById("pagination");
 
 function renderPagination() {
     paginationContainer.innerHTML = ''; // Clear existing pagination
-    for (let i = 0; i < chapters.length; i++) {
+    const start = Math.max(0, currentChapterIndex - 1);
+    const end = Math.min(chapters.length, start + 3);
+    for (let i = start; i < end; i++) {
         const dot = document.createElement('div');
         dot.classList.add('pagination-dot');
         dot.dataset.index = i; // Assign index to dataset for easy retrieval
@@ -160,3 +162,9 @@ paginationDots.forEach(dot => {
 // Initial render
 renderChapter(currentChapterIndex);
 renderPagination();
+
+
+// Get current year and update footer
+const currentYearElem = document.getElementById("currentYear");
+const currentYear = new Date().getFullYear();
+currentYearElem.textContent = currentYear;

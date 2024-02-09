@@ -88,18 +88,18 @@
     <div class="about w-full text-[#03045e] text-center pt-[2rem] pb-10">
         <h1 class="font-bold text-xl mb-[1rem]">Watuka's Story</h1>
         <div id="chapter-carousel" class="flex justify-center items-center pb-5">
-            <div id="chapter-card" class="max-w-md  p-6 bg-white rounded-lg shadow-lg">
+            <div id="chapter-card" class="max-w-md w-[25rem]  p-6 bg-white rounded-lg shadow-lg">
                 <h2 id="chapter-title" class="text-2xl font-semibold mb-4"></h2>
                 <p id="chapter-content" class="text-lg"></p>
-                <div class="mt-6 flex justify-around">
-                    <button id="prev-btn" class=" bg-[#025d8a6e] backdrop-blur-lg uppercase text-[#fefefe] flex  gap-2 items-center px-4 py-2  rounded-lg hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-[#FEFEFE] hover:tracking-wider">
-                        <img id="prev-img" class="hidden max-w-[1.4rem]" src="images/prev.svg" alt="prev" />
+                <div class="mt-6 flex  justify-around">
+                    <button id="prev-btn" class=" bg-[#025d8a6e] text-xs max-w-[6.5rem] min-w-[6.4rem] backdrop-blur-lg uppercase text-[#fefefe] flex  gap-2 items-center px-4 py-2  rounded-lg hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-[#FEFEFE] hover:tracking-wider">
+                        <img id="prev-img" class="hidden max-w-[1rem]" src="images/prev.svg" alt="prev" />
                         Previous
                     </button>
-                    <div id="pagination" class="mt-4 flex justify-center items-center"></div>
-                    <button id="next-btn" class=" bg-[#025d8a6e] backdrop-blur-lg uppercase text-[#fefefe] flex gap-2 items-center px-4 py-2  rounded-lg hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-[#FEFEFE] hover:tracking-wider">
+                    <div id="pagination" class="mt-4 overflow-hidden flex justify-center max-w-[5rem]"></div>
+                    <button id="next-btn" class=" bg-[#025d8a6e] text-xs max-w-[6.5rem] min-w-[6.4rem] backdrop-blur-lg uppercase text-[#fefefe] flex gap-2 justify-center items-center px-4 py-2  rounded-lg hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-[#FEFEFE] hover:tracking-wider">
                         Next
-                        <img id="next-img" class="hidden max-w-[1.4rem]" src="images/next.svg" alt="next" />
+                        <img id="next-img" class="hidden max-w-[1rem]" src="images/next.svg" alt="next" />
                     </button>
                 </div>
             </div>
@@ -110,10 +110,26 @@
 
 
     <!-- ====> Your guide Section start <====  -->
-    <div class="Your-guide w-full text-[#03045e] text-center pt-[2rem] mb-4">
-
-    </div>
+    <!-- <div class="Your-guide w-full text-[#03045e] text-center pt-[2rem] mb-4">
+        <div class="guide-card">
+            <div class="avatar">
+                <img src="images/avatar.jpg" alt="Guide Avatar">
+            </div>
+            <div class="guide-info">
+                <h3>Guide's Name</h3>
+                <p>Guide's Address</p>
+                <p>Hobbies: Making DIYs and Hiking</p>
+            </div>
+        </div>        
+    </div> -->
     <!-- ====> Your guide Section end <====  -->
+
+    <footer class="footer fixed w-full h-[10rem] bg-[#bde0fe]  bottom-0 text-[#03045e] text-xs mt-[2rem]">
+        <div class="container">
+            <p class="copyright">Made by NKACE &copy; <span id="currentYear"></span></p>
+            <p class="important-info">For inquiries, please contact us at <a href="mailto:chokwewalshwade@gmail.com">mainace8@gmail.com</a>.</p>
+        </div>
+    </footer>
 
 </body>
 
