@@ -85,6 +85,8 @@ const chapterTitleElem = document.getElementById("chapter-title");
 const chapterContentElem = document.getElementById("chapter-content");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
+const nextImg = document.getElementById("next-img");
+const prevImg = document.getElementById("prev-img");
 
 function renderChapter(index) {
 const chapter = chapters[index];
@@ -106,8 +108,28 @@ if (currentChapterIndex < chapters.length - 1) {
 }
 }
 
+function displayNextImg() {
+    nextImg.classList.remove('hidden');
+}
+
+function displayPrevtImg() {
+    prevImg.classList.remove('hidden');
+}
+
+function hideNextImg() {
+    nextImg.classList.add('hidden');
+}
+
+function hidePrevtImg() {
+    prevImg.classList.add('hidden');
+}
+
 prevBtn.addEventListener("click", goToPrevChapter);
 nextBtn.addEventListener("click", goToNextChapter);
+nextBtn.addEventListener('mouseover', displayNextImg);
+prevBtn.addEventListener('mouseover', displayPrevtImg);
+nextBtn.addEventListener('mouseleave', hideNextImg);
+prevBtn.addEventListener('mouseleave', hidePrevtImg);
 
 // Initial render
 renderChapter(currentChapterIndex);

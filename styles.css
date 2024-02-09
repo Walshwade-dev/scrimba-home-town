@@ -1,3 +1,17 @@
+
+:root {
+    --color-textlight: #FEFEFE;
+    --color-textdark:#03045e;
+    --color-pallet1:#407076;
+    --color-pallet2:#698996;
+    --color-pallet3: #97B1A6;
+    --color-pallet4: #C9C5BA;
+    --color-tint:#EBBAB9;
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +58,7 @@
 
 
 .curved-text {
-    animation: rotateText 20s linear infinite;
+    animation: rotateText 40s linear infinite;
 }
 
 
@@ -55,6 +69,25 @@
     font-size: 1.2rem;
     font-weight: bold;
     transform-origin: 0 6.9rem;
+}
+
+.overlay {
+    border-radius: 0 1.2rem 0.5rem 0.5rem;
+}
+
+.overlay::before, .overlay::after {
+    content: '';
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background-color: #EBBAB9;
+    left: 0;
+    top: -2rem;
+}
+
+.overlay::after {
+    border-radius: 0 0 0 1.5rem;
+    background-color: #b5179e;
 }
 
 .about {
@@ -73,10 +106,10 @@
 
 @keyframes rotateText {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
     100% {
-        transform: rotate(100deg);
+        transform: rotate(0deg);
     }
 }
 

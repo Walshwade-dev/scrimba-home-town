@@ -27,17 +27,21 @@
         <div class="w-full flex flex-col justify-around items-center md:flex-row md:px-14 md:py-10">
             
                 <div class="bg-[#b5179e] rounded-xl w-[14rem] h-[24rem] py-[2rem] px-[1.5rem] mb-[1.2rem] shadow-xl shadow-[#4361ee]">
-                    <div class="circle relative w-[12rem] h-[12rem] rounded-full mx-auto">
+                    <div class="circle relative w-[12rem] h-[12rem] rounded-full mx-auto mb-2">
                         <div id="main-image-1" class="absolute main-image mx-auto w-[11rem] h-[11rem]  border-8 border-[#ffafcc] overflow-hidden rounded-full drop-shadow-xl ">
                         </div>
                         <div id="curved-text-1" class="text absolute curved-text ">
                             <p>Enjoy m ilkshakes from the W atuka Co-op Society.</p>
                         </div>
                     </div>
-                    <h3 class="my-[0.5rem]">Milk Bar</h3>
-                    <p>
-                        Their milk bar is a great place to quench ones thirst with a quality drink.
-                    </p>
+                    
+                    <div class="activities-description relative  w-[14rem] h-[10rem] -ml-6 rounded-tr-xl rounded-b-xl">
+                        <span class="overlay absolute w-full h-[100%] left-0 top-0 -z-0 bg-[#EBBAB9] rounded-rl-xl rounded-b-xl "></span>
+                        <h3 class="absolute left-[40%] my-[0.5rem] card-title">Milk Bar</h3>
+                        <p class="absolute top-[20%]  card-description">
+                            Their milk bar is a great place to quench ones thirst with a quality drink.
+                        </p>
+                    </div>
                 </div>            
 
                 <div class="bg-[#b5179e] rounded-xl w-[14rem] h-[24rem] py-[2rem] px-[1.5rem] mb-[1.2rem] shadow-xl shadow-[#4361ee]">
@@ -48,10 +52,13 @@
                             <p >Take scenic images of Nyeri county.</p>
                         </div>
                     </div>
-                    <h3 class="my-[0.5rem]">nd'unyu-guathi hill view</h3>
-                    <p>
-                        Observation hill is the place to go, for you to enjoy the beautiful views of county 019, Nyeri.
-                    </p>
+                    <div class="activities-description relative  w-[14rem] h-[10rem] -ml-6 rounded-tr-xl rounded-b-xl">
+                        <span class="overlay absolute w-full h-[100%] left-0 top-0 -z-0 bg-[#EBBAB9] rounded-rl-xl rounded-b-xl "></span>
+                        <h3 class="absolute left-[15%] my-[0.5rem] card-title">nd'unyu-guathi hill view</h3>
+                        <p class="absolute top-[20%] px-2 py-2 card-description">
+                            Observation hill is the place to go, for you to enjoy the beautiful views of county 019, Nyeri.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="bg-[#b5179e] rounded-xl w-[14rem] h-[24rem] py-[2rem] px-[1.5rem] mb-[1.2rem] shadow-xl shadow-[#4361ee]">
@@ -62,10 +69,13 @@
                             <p>Go for a nature walk.</p>
                         </div>
                     </div>
-                    <h3 class="my-[0.5rem]">Watuka-aberdare road</h3>
-                    <p>
-                        The Aberdares or King`as' camp is a perfect place for picnic or chill out.
-                    </p>
+                    <div class="activities-description relative  w-[14rem] h-[10rem] -ml-6 rounded-tr-xl rounded-b-xl">
+                        <span class="overlay absolute w-full h-[100%] left-0 top-0 -z-0 bg-[#EBBAB9] rounded-rl-xl rounded-b-xl "></span>
+                        <h3 class="absolute left-[15%] my-[0.5rem] card-title">Watuka-aberdare road</h3>
+                        <p class="absolute top-[20%] px-2 py-2 card-description">
+                            The Aberdares or King`as' camp is a perfect place for picnic or chill out.
+                        </p>
+                    </div>
                 </div>
 
         </div>
@@ -75,15 +85,21 @@
 
 
     <!-- ====>ABOUT Section start <====  -->
-    <div class="about w-full text-[#03045e] text-center pt-[2rem] mb-4">
+    <div class="about w-full text-[#03045e] text-center pt-[2rem] pb-10">
         <h1 class="font-bold text-xl mb-[1rem]">Watuka's Story</h1>
-        <div id="chapter-carousel" class="flex justify-center items-center ">
+        <div id="chapter-carousel" class="flex justify-center items-center pb-5">
             <div id="chapter-card" class="max-w-md  p-6 bg-white rounded-lg shadow-lg">
               <h2 id="chapter-title" class="text-2xl font-semibold mb-4"></h2>
               <p id="chapter-content" class="text-lg"></p>
               <div class="mt-6 flex justify-around">
-                <button id="prev-btn" class="px-4 py-2 bg-gray-200 rounded-lg">Previous</button>
-                <button id="next-btn" class="px-4 py-2 bg-gray-200 rounded-lg">Next</button>
+                <button id="prev-btn" class="flex  gap-2 items-center px-4 py-2 bg-gray-200 rounded-lg hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-[#FEFEFE] hover:tracking-wider">
+                    <img id="prev-img" class="hidden max-w-[1.4rem]" src="images/prev.svg" alt="prev" />
+                    Previous
+                </button>
+                <button id="next-btn" class="flex gap-2 items-center px-4 py-2 bg-gray-200 rounded-lg hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-[#FEFEFE] hover:tracking-wider">
+                    Next
+                    <img id="next-img" class="hidden max-w-[1.4rem]" src="images/next.svg" alt="next" />
+                </button>
               </div>
             </div>
           </div>
@@ -91,7 +107,15 @@
     </div>
     <!-- ====>ABOUT Section end <====  -->
 
+
+    <!-- ====> Your guide Section start <====  -->
+    <div class="Your-guide w-full text-[#03045e] text-center pt-[2rem] mb-4">
+
+    </div>
+    <!-- ====> Your guide Section end <====  -->
+
 </body>
 
 <script src="/index.js" ></script>
+<script src="/tailwind.config.js"></script>
 </html>
