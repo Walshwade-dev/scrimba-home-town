@@ -104,6 +104,34 @@
     background-size: cover;
 }
 
+
+/* Pagination styles */
+.pagination-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #b5179e;
+    border-radius: 50%;
+    margin: 0 4px; /* Adjust as needed */
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.pagination-dot.active {
+    background-color: #EBBAB9;
+}
+
+.pagination-slider {
+    display: flex;
+    overflow: hidden;
+    padding: 0 10px; /* Adjust as needed */
+}
+
+.pagination-slider-inner {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+  
+
 @keyframes rotateText {
     0% {
         transform: rotate(360deg);
@@ -128,3 +156,4 @@
             center, bottom right, left;
     }
 }
+

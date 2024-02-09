@@ -2,7 +2,6 @@ const curvedTextOne = document.querySelector('#curved-text-1 p');
 const curvedTextTwo = document.querySelector('#curved-text-2 p');
 const curvedTextThree = document.querySelector('#curved-text-3 p');
 
-
 curvedTextOne.innerHTML = curvedTextOne.innerText.split('').map(
     (char, i) =>   `
         <span style="transform:rotate(${i * 7.2}deg)">${char}</span>
@@ -20,10 +19,6 @@ curvedTextThree.innerHTML = curvedTextThree.innerText.split('').map(
         <span style="transform:rotate(${i * 16}deg)">${char}</span>
     `
 ).join('');
-
-
-
-
 
 const chapters = [
     {
@@ -73,11 +68,9 @@ const chapters = [
 
     {
         title: "Tapestry of Memories",
-        content: "As the sun sets over the rolling hills of Nyeri County, the memories of Watuka linger like the whispers of a gentle breeze. In the heart of this small shopping center, where fields meet civilization, the story of Watuka continues to unfold—a testament to the resilience of the human spirit and the enduring bonds of community."
+        content: "As the sun sets over the rolling Aberdare Ranges, the memories of Watuka linger like the whispers of a gentle breeze. In the heart of this small shopping center, where fields meet civilization, the story of Watuka continues to unfold—a testament to the resilience of the human spirit and the enduring bonds of community."
     }
-]
-
-
+];
 
 let currentChapterIndex = 0;
 
@@ -87,25 +80,52 @@ const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const nextImg = document.getElementById("next-img");
 const prevImg = document.getElementById("prev-img");
+const paginationContainer = document.getElementById("pagination");
+
+function renderPagination() {
+    paginationContainer.innerHTML = ''; // Clear existing pagination
+    for (let i = 0; i < chapters.length; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('pagination-dot');
+        dot.dataset.index = i; // Assign index to dataset for easy retrieval
+        if (i === currentChapterIndex) {
+            dot.classList.add('active');
+        }
+        paginationContainer.appendChild(dot);
+    }
+}
+
+function updateActiveDot() {
+    const dots = document.querySelectorAll('.pagination-dot');
+    dots.forEach((dot, index) => {
+        if (index === currentChapterIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
 
 function renderChapter(index) {
-const chapter = chapters[index];
-chapterTitleElem.textContent = chapter.title;
-chapterContentElem.textContent = chapter.content;
+    const chapter = chapters[index];
+    chapterTitleElem.textContent = chapter.title;
+    chapterContentElem.textContent = chapter.content;
+    updateActiveDot();
+}
+
+function handlePaginationDotClick() {
+    currentChapterIndex = parseInt(this.dataset.index);
+    renderChapter(currentChapterIndex);
 }
 
 function goToPrevChapter() {
-if (currentChapterIndex > 0) {
-    currentChapterIndex--;
+    currentChapterIndex = (currentChapterIndex - 1 + chapters.length) % chapters.length;
     renderChapter(currentChapterIndex);
-}
 }
 
 function goToNextChapter() {
-if (currentChapterIndex < chapters.length - 1) {
-    currentChapterIndex++;
+    currentChapterIndex = (currentChapterIndex + 1) % chapters.length;
     renderChapter(currentChapterIndex);
-}
 }
 
 function displayNextImg() {
@@ -131,5 +151,12 @@ prevBtn.addEventListener('mouseover', displayPrevtImg);
 nextBtn.addEventListener('mouseleave', hideNextImg);
 prevBtn.addEventListener('mouseleave', hidePrevtImg);
 
+// Add event listeners for pagination dots
+const paginationDots = document.querySelectorAll('.pagination-dot');
+paginationDots.forEach(dot => {
+    dot.addEventListener('click', handlePaginationDotClick);
+});
+
 // Initial render
 renderChapter(currentChapterIndex);
+renderPagination();
