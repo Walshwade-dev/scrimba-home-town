@@ -256,3 +256,8 @@ footer {
     background-attachment: fixed;
     background-size: cover;
 }
+
+
+.text-1, .text-2, .text-3 {
+    text-shadow: 0px 0px 4px #FEFEFE;
+}

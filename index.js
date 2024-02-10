@@ -85,7 +85,7 @@ const paginationContainer = document.getElementById("pagination");
 function renderPagination() {
     paginationContainer.innerHTML = ''; // Clear existing pagination
     const start = Math.max(0, currentChapterIndex - 1);
-    const end = Math.min(chapters.length, start + 3);
+    const end = Math.min(chapters.length);
     for (let i = start; i < end; i++) {
         const dot = document.createElement('div');
         dot.classList.add('pagination-dot');
